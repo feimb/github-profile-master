@@ -1,7 +1,7 @@
 import "./SearchBar.css";
 import React from "react";
 import { useState, useEffect } from "react";
-import axios, { type AxiosResponse } from "axios";
+import axios from "axios";
 import SuggestionBox from "./subcomponets/SuggestionBox";
 type Props = {
     setUsername: React.Dispatch<React.SetStateAction<string>>;

@@ -7,6 +7,17 @@ type Props = {
     bio: string;
     repoUrl: string;
 };
+
+type Repo = {
+    id: number;
+    name: string;
+    description: string;
+    license: { name: string } | null;
+    forks_count: number;
+    stargazers_count: number;
+    [key: string]: any;
+};
+
 const Repositorios = ({ name, bio, repoUrl }: Props) => {
     const [repos, setRepos] = useState([]);
     const [page, setPage] = useState(4);
@@ -33,11 +44,13 @@ const Repositorios = ({ name, bio, repoUrl }: Props) => {
                 <p>{bio}</p>
             </div>
             <div className="repos-cards">
-                <div className="repos-cards">
-                    {repos.map((repo) => (
-                        <CardRepo key={repo.id} info={repo} />
-                    ))}
-                </div>
+                {repos.map((repo: Repo) => {
+                    const repoInfo = {
+                        ...repo,
+                        license: repo.license ? repo.license.name : null,
+                    };
+                    return <CardRepo key={repo.id} info={repoInfo} />;
+                })}
             </div>
             <button
                 className="view-all"

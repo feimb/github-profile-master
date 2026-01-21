@@ -1,6 +1,14 @@
 import "./CardRepo.css"
 
-const CardRepo = ({ info }) => (
+interface RepoInfo {
+  name: string;
+  description: string;
+  license: string | null;
+  forks_count: number;
+  stargazers_count: number;
+}
+
+const CardRepo = ({ info }: { info: RepoInfo }) => (
     <div className="card-repo">
         <h2>{info.name}</h2>
         <p>{info.description}</p>

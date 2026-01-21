@@ -4,9 +4,20 @@ import PerfilInformation from "./components/PerfilInformation";
 import SearchBar from "./components/SearchBar";
 import Repositorios from "./components/Repositorios";
 import axios from "axios";
+
+interface GitHubUser {
+    avatar_url: string;
+    followers: number;
+    following: number;
+    location: string;
+    name: string;
+    bio: string;
+    repos_url: string;
+}
+
 function App() {
     const [username, setUsername] = useState<string>("");
-    const [userSearched, setUserSearched] = useState({});
+    const [userSearched, setUserSearched] = useState<GitHubUser | null>(null);
     useEffect(() => {
         if (username.length < 3) return;
         const fetchData = async () => {
@@ -27,18 +38,22 @@ function App() {
             {/* header */}
             <SearchBar setUsername={setUsername} />
             {/* perfil information   */}
-            <PerfilInformation
-                avatar={userSearched.avatar_url}
-                followers={userSearched.followers}
-                following={userSearched.following}
-                location={userSearched.location}
-            />
-            {/* repositorios */}
-            <Repositorios
-                name={userSearched.name}
-                bio={userSearched.bio}
-                repoUrl={userSearched.repos_url}
-            />
+            {userSearched && (
+                <>
+                    <PerfilInformation
+                        avatar={userSearched.avatar_url}
+                        followers={userSearched.followers.toString()}
+                        following={userSearched.following.toString()}
+                        location={userSearched.location}
+                    />
+                    {/* repositorios */}
+                    <Repositorios
+                        name={userSearched.name}
+                        bio={userSearched.bio}
+                        repoUrl={userSearched.repos_url}
+                    />
+                </>
+            )}
         </>
     );
 }
