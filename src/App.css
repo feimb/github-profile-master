@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-image: url("../public/resources/hero-image-github-profile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% cover;
+    background-position: top center;
+}
+section{
+    margin: 0 120px;
+}
+
+@media (max-width: 1100px){
+    section{
+        margin: 0 80px;
+    }
+}
+@media (max-width: 900px){
+    section{
+        margin: 0 30px;
+    }
+}

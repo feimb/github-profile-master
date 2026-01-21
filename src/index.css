@@ -1,0 +1,15 @@
+:root{
+    --primary-color: #20293A;
+    --secundary-color: #111729;
+    --terciary-color: #1D1B48;
+    
+    --bar-color: #364153;
+
+    --primary-font-color: #CDD5E0;
+    --secundary-font-color: #97A3B6;
+
+    --background-card-color: linear-gradient(95deg, #111729 3%, #1d1b48 99.61%); ;
+}
+.inactive{
+    display: none;
+}

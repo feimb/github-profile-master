@@ -1,0 +1,19 @@
+.card{
+    background-color: var(--secundary-color);
+    border-radius: 8px;
+    padding: 8px 21px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.card span {
+    font-size:  0.75rem;
+    font-weight: 550;  
+}
+.bar{
+    margin: 0 20px;
+    width: 1px;
+    height: 36px;
+    background-color: var(--bar-color);
+}

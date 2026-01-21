@@ -1,0 +1,23 @@
+.suggestion-box-item{
+    padding: 8px;
+    margin-top: 8px;
+    background-color: var(--secundary-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    cursor: pointer;
+}
+.suggestion-box-item img{
+    width: 74px;
+    height: 74px;
+    border-radius: 8px;
+}
+.suggestion-box-item--text h2{
+    font-size: 1rem;
+    color: --primary-font-color;
+}
+.suggestion-box-item--text p{
+    font-size: 0.75rem;
+    color: var(--secundary-font-color);
+}

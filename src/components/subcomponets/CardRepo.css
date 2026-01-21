@@ -1,0 +1,39 @@
+.card-repo{
+    height: auto;
+    padding: 16px 24px;
+    background: var(--background-card-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+}
+.card-repo h2{
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 28px;
+    color: var(--primary-font-color);
+    margin-bottom: 8px;
+}
+.card-repo > p{
+    font-size: 1rem;
+    max-width: 400px;
+    color: var(--secundary-font-color);
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-repo footer{
+    margin-top: auto;
+    display: flex;
+    gap: 24px;
+}
+.card-repo footer span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+}
+.card-repo .update{
+    color: var(--secundary-font-color);
+    font-size: 0.75rem;
+}
