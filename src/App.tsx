@@ -16,7 +16,7 @@ interface GitHubUser {
 }
 
 function App() {
-    const [username, setUsername] = useState<string>("");
+    const [username, setUsername] = useState<string>("Github");
     const [userSearched, setUserSearched] = useState<GitHubUser | null>(null);
     useEffect(() => {
         if (username.length < 3) return;
