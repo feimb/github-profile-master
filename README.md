@@ -1,73 +1,37 @@
-# React + TypeScript + Vite
+# 🔎 GitHub Profile Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que permite buscar usuarios de GitHub y visualizar su información en tiempo real consumiendo la API pública.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías
+- React
+- Fetch API
+- CSS / Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
+- Búsqueda de usuarios de GitHub
+- Visualización de perfil (avatar, nombre, repositorios, seguidores)
+- Manejo de estados de carga (loading)
+- Manejo de errores (usuario no encontrado)
+- Interfaz responsive
 
-## React Compiler
+## 🧠 Qué demuestra este proyecto
+- Consumo de APIs REST
+- Manejo de estado en React
+- Renderizado condicional
+- Manejo de datos asincrónicos
+- Buenas prácticas en estructura de componentes
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🌐 Demo
+(Añadir link si lo desplegás en Vercel o Netlify)
 
-## Expanding the ESLint configuration
+## 💻 Código
+https://github.com/feimb/github-profile-master
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📚 Aprendizajes
+En este proyecto aprendí a consumir APIs externas, manejar estados asincrónicos y mostrar información dinámica en función de la respuesta del servidor.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+También mejoré mi manejo de renderizado condicional y organización de componentes en React.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👤 Autor
+- LinkedIn: https://www.linkedin.com/in/fei-mosqueda-934036260  
+- GitHub: https://github.com/feimb
